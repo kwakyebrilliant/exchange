@@ -35,7 +35,7 @@ class _ExchangeScreenState extends State<ExchangeScreen> {
 
                 //Big Container
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding: const EdgeInsets.only(top: 50.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     padding: const EdgeInsets.all(16),
@@ -131,10 +131,13 @@ class _ExchangeScreenState extends State<ExchangeScreen> {
                                 color: Colors.grey[500],
                               ),
                               border: InputBorder.none,
-                              suffixIcon: const Icon(
-                                Icons.currency_exchange_rounded,
-                                size: 30.0,
-                                color: Colors.teal,
+                              suffixIcon: const Padding(
+                                padding: EdgeInsets.only(right: 70.0),
+                                child: Icon(
+                                  Icons.currency_exchange_rounded,
+                                  size: 30.0,
+                                  color: Colors.teal,
+                                ),
                               ),
                             ),
                           ),
@@ -201,7 +204,64 @@ class _ExchangeScreenState extends State<ExchangeScreen> {
                             ),
                           ],
                         ),
+
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+
+                        //conversion text here
+                        Text(
+                          '1 United States Dollar (USD) = 0.000037 (BTC)',
+                          style: TextStyle(
+                            color: Colors.grey[500],
+                            fontSize: 10.0,
+                          ),
+                        ),
+
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+
+                        //conversion amount here
+                        const Text(
+                          '8,876,379.00',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25.0,
+                          ),
+                        ),
                       ],
+                    ),
+                  ),
+                ),
+
+                //conversion button
+                Padding(
+                  padding: const EdgeInsets.only(top: 40.0),
+                  child: Center(
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: Colors.teal,
+                          borderRadius: BorderRadius.circular(16.0),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(20.0),
+                          child: Center(
+                            child: Text(
+                              'Convert Amount',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
