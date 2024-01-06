@@ -182,6 +182,138 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+
+                //container for horizontal scroll items
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0),
+                  child: Container(
+                    height: 130.0,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                          child: Container(
+                            width: 170.0,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF262B34),
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15.0),
+                                  child: Row(
+                                    children: [
+                                      //BTC container here
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10.0),
+                                        child: Container(
+                                          height: 35.0,
+                                          width: 35.0,
+                                          decoration: BoxDecoration(
+                                            color: Colors.teal,
+                                            borderRadius:
+                                                BorderRadius.circular(10.0),
+                                          ),
+                                          child: const Icon(
+                                            Icons.currency_bitcoin_rounded,
+                                            color: Colors.white,
+                                            size: 30,
+                                          ),
+                                        ),
+                                      ),
+
+                                      //BTC text here
+                                      const Padding(
+                                        padding: EdgeInsets.only(left: 10.0),
+                                        child: Text(
+                                          'BTC/USD',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                //statistics here
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 30.0),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 10.0),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            //martket cap text here
+                                            Text(
+                                              'Market Cap',
+                                              style: TextStyle(
+                                                color: Colors.grey[500],
+                                                fontSize: 10,
+                                              ),
+                                            ),
+                                            const SizedBox(height: 4.0),
+
+                                            //amount here
+                                            const Text(
+                                              '\$598,372',
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+
+                                      //changes here
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            right: 10.0, top: 12.0),
+                                        child: Row(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Icon(
+                                              Icons.arrow_drop_up,
+                                              color: Colors.teal,
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  EdgeInsets.only(top: 5.0),
+                                              child: Text(
+                                                '+72%',
+                                                style: TextStyle(
+                                                  color: Colors.teal,
+                                                  fontSize: 10,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
               ],
             ),
           ),
