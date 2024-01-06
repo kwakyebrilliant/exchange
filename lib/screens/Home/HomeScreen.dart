@@ -175,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const Padding(
                   padding: EdgeInsets.only(top: 40.0),
                   child: Text(
-                    'My Assets',
+                    'Assets',
                     style: TextStyle(
                       fontSize: 16.0,
                       color: Colors.white,
