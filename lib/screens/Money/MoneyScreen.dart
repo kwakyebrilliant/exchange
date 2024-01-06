@@ -209,6 +209,11 @@ class _MoneyScreenState extends State<MoneyScreen> {
                         ),
                         prefix: Text('\$ '),
                         border: InputBorder.none,
+                        suffixIcon: Icon(
+                          Icons.send_rounded,
+                          size: 30.0,
+                          color: Colors.teal,
+                        ),
                       ),
                     ),
                   ),
