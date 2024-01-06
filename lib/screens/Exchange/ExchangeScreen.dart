@@ -43,55 +43,77 @@ class _ExchangeScreenState extends State<ExchangeScreen> {
                       borderRadius: BorderRadius.circular(16),
                       color: const Color(0xFF262B34),
                     ),
-                    child: const Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Cardholder Name',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 10,
+                            Container(
+                              child: Row(
+                                children: [
+                                  //Bitcoin container here
+                                  Container(
+                                    height: 35.0,
+                                    width: 35.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.teal,
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                    child: const Icon(
+                                      Icons.currency_bitcoin_rounded,
+                                      color: Colors.white,
+                                      size: 30,
+                                    ),
                                   ),
-                                ),
-                                SizedBox(height: 4),
-                                Text(
-                                  'John Doe', // Replace with actual cardholder name
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
+
+                                  //Bitcoin text here
+                                  const Padding(
+                                    padding: EdgeInsets.only(left: 10.0),
+                                    child: Text(
+                                      'Bitcoin',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ],
+
+                                  //arrow down here
+                                  Icon(
+                                    Icons.arrow_drop_down_rounded,
+                                    color: Colors.grey[500],
+                                    size: 30,
+                                  ),
+                                ],
+                              ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Expires',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 10,
-                                  ),
-                                ),
-                                SizedBox(height: 4),
-                                Text(
-                                  '12/24', // Replace with actual cardholder name
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ],
+
+                            //BTC text here
+                            Text(
+                              'BTC',
+                              style: TextStyle(
+                                color: Colors.grey[500],
+                              ),
                             ),
                           ],
+                        ),
+
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+
+                        //conversion text here
+                        Text(
+                          '1 Bitcoin (BTC) = 45,679 (USD)',
+                          style: TextStyle(
+                            color: Colors.grey[500],
+                            fontSize: 10.0,
+                          ),
+                        ),
+
+                        const SizedBox(
+                          height: 30.0,
                         ),
                       ],
                     ),
