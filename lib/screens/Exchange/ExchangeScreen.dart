@@ -113,7 +113,93 @@ class _ExchangeScreenState extends State<ExchangeScreen> {
                         ),
 
                         const SizedBox(
-                          height: 30.0,
+                          height: 20.0,
+                        ),
+
+                        //amount textfield
+                        Center(
+                          child: TextField(
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            decoration: InputDecoration(
+                              hintText: 'Enter Amount',
+                              hintStyle: TextStyle(
+                                fontSize: 10,
+                                color: Colors.grey[500],
+                              ),
+                              border: InputBorder.none,
+                              suffixIcon: const Icon(
+                                Icons.currency_exchange_rounded,
+                                size: 30.0,
+                                color: Colors.teal,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              child: Row(
+                                children: [
+                                  //USD container here
+                                  Container(
+                                    height: 35.0,
+                                    width: 35.0,
+                                    decoration: BoxDecoration(
+                                      color: Colors.teal,
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        '\$',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 25.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+
+                                  //USD text here
+                                  const Padding(
+                                    padding: EdgeInsets.only(left: 10.0),
+                                    child: Text(
+                                      'USD',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+
+                                  //arrow down here
+                                  Icon(
+                                    Icons.arrow_drop_down_rounded,
+                                    color: Colors.grey[500],
+                                    size: 30,
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //BTC text here
+                            Text(
+                              'USD',
+                              style: TextStyle(
+                                color: Colors.grey[500],
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
