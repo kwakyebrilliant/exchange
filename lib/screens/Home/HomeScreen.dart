@@ -171,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
-                //my assets here
+                // assets here
                 const Padding(
                   padding: EdgeInsets.only(top: 40.0),
                   child: Text(
@@ -435,7 +435,72 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                )
+                ),
+
+                // news here
+                const Padding(
+                  padding: EdgeInsets.only(top: 40.0, left: 20.0),
+                  child: Text(
+                    'News',
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+
+                // news items
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0, left: 20.0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.blueGrey.withOpacity(0.2),
+                    ),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'From Bloomberg',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                  ),
+                                ),
+                                SizedBox(height: 4),
+                                Text(
+                                  'Lorem Ipsum is simply dummy...',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.close_rounded,
+                                  size: 30.0,
+                                  color: Colors.red,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

@@ -199,7 +199,7 @@ class _MoneyScreenState extends State<MoneyScreen> {
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
                       ),
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.start,
                       decoration: InputDecoration(
                         hintText: 'Enter Amount',
                         hintStyle: TextStyle(
