@@ -1,6 +1,6 @@
 # exchange
 
-A new Flutter project.
+<img src="assets/images/Exchange copy.png" alt="image" width="" >
 
 ## Getting Started
 
